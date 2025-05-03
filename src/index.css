@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --bg-light: 248 252 252;
+        --bg-dark: 15 23 42;
+    }
+
+    html {
+        @apply scroll-smooth;
+    }
+
+    body {
+        @apply bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-200 transition-colors duration-300;
+    }
+
+    /* Additional styles for markdown/prose content */
+    .prose h1,
+    .prose h2,
+    .prose h3,
+    .prose h4,
+    .prose h5,
+    .prose h6 {
+        @apply text-slate-900 dark:text-slate-100 scroll-mt-20;
+    }
+
+    .prose p,
+    .prose li {
+        @apply text-slate-700 dark:text-slate-300;
+    }
+
+    .prose a {
+        @apply text-purple-700 dark:text-purple-400 font-medium hover:text-purple-900 dark:hover:text-purple-300 no-underline hover:underline;
+    }
+
+    .prose code:not(pre code) {
+        @apply bg-slate-100 dark:bg-slate-800 py-0.5 px-1 rounded text-purple-800 dark:text-purple-300 font-medium;
+    }
+
+    /* Custom scrollbar for Webkit browsers */
+    ::-webkit-scrollbar {
+        @apply w-2 h-2;
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-slate-200 dark:bg-slate-800;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply bg-slate-400 dark:bg-slate-600 rounded-full hover:bg-slate-500 dark:hover:bg-slate-500;
+    }
+
+    /* For Firefox */
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: #94a3b8 #e2e8f0;
+    }
+
+    .dark * {
+        scrollbar-color: #475569 #1e293b;
+    }
+}
