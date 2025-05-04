@@ -17,6 +17,7 @@ import ProjectilePage from "./pages/Projectile.jsx";
 import LensPage from "./pages/Lens.jsx";
 import MagnetPage from "./pages/Magnet.jsx";
 import EntropyPage from "./pages/Entropy.jsx";
+import CollisionPage from "./pages/Collision.jsx";
 
 function App() {
     const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -64,6 +65,10 @@ function App() {
                             <Route path="/lens" element={<LensPage />} />
                             <Route path="/magnet" element={<MagnetPage />} />
                             <Route path="/entropy" element={<EntropyPage />} />
+                            <Route
+                                path="/collision"
+                                element={<CollisionPage />}
+                            />
                         </Routes>
                     </main>
                 </div>

@@ -19,6 +19,7 @@ import {
     ChevronLeft,
     Sun,
     Moon,
+    CircleOff,
 } from "lucide-react";
 
 import { Link } from "react-router-dom";
@@ -75,6 +76,11 @@ export default function PhysicsSidebar({ isOpen, setIsOpen }) {
             name: "Harmonic",
             path: "/harmonic",
             icon: <Music className="w-5 h-5" />,
+        },
+        {
+            name: "Collision",
+            path: "/collision",
+            icon: <CircleOff className="w-5 h-5" />,
         },
         {
             name: "Fluids",
